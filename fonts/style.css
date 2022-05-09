@@ -1,0 +1,61 @@
+.section1 {
+    border-radius: 10px;
+    background-color: rosybrown;
+    display: grid;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+body {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+.nopointul {
+    list-style-type: none;
+}
+.filtres {
+    height: 40px;
+    width: 100%;
+    border: 4px cornflowerblue;
+    /*padding: 5px;*/
+    display: flex;
+    float: left;
+    text-align:center;
+    padding: 8px;
+    font-size: 14px;
+    /*position: fixed;*/
+    font-weight: 600;
+    gap: 8px;
+    margin-top: 8px;
+}
+button {
+    height: 17px;
+    width: 17px;
+    display: inline;
+    border-radius: 50%;
+    border: 1px solid #000;
+}
+.flex {
+    display: flex;
+}
+.background-div {
+    background-color: white;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.img-hotel {
+    display: block;
+}
+.starcolor-blue {
+    color: blue;
+}
+.starcolor-grey {
+    color: gray;
+}
+* 
+{
+    font-style: raleway;
+}
