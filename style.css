@@ -31,7 +31,7 @@ header , main {
     padding-right: 20px;
 }
 h1 {
-   font-size: 22px;
+   font-size: 20px;
    font-weight: 700;
 }
 li {
@@ -52,23 +52,19 @@ a {
     justify-content: space-between;
 }
 .div_logo_booki {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 20px;
 }
 .img_logo_booki {
     height: 50px;
     width: 100px;
 }
-.nav_ul {
+.ul_nav {
     display: inline-flex;
     margin: 0;
     gap: 3px;
     padding-inline-start: 0;
 }
 .button_nav {
-    border-top: 3px solid white;
     margin-top: 0;
     display: inline-block;
     line-height: 100px;
@@ -80,6 +76,11 @@ a {
 .button_nav:hover {
     border-top: 2px solid #0065FC;
     color: #0065FC;
+}
+.div_bar_search {
+    color: aliceblue;
+    font-size: 0px;
+    border-collapse: collapse;
 }
 .input_search {
     font-weight: 700;
@@ -98,8 +99,7 @@ a {
 .input_search:focus {
     outline: none;
 }
-.button_search 
-{
+.button_search {
     border: solid 3px #0065FC;
     border-radius: 0px 15px 15px 0px;
     background-color: #0065FC;
@@ -109,20 +109,27 @@ a {
     height: 50px;
     width: 125px;
 }
+.button_search_mobile {
+    display: none;
+    background-color: #0065FC;
+    color: white;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    border: 0px;
+    border-radius: 15px 15px 15px 15px;
+}
 .button_localisation {
     border: 3px #F2F2F2;
     border-radius: 15px 0px 0px 15px;
     font-weight: 700;
     font-size: 16px;
-    height: 52px;
-    width: 52px;
+    height: 50px;
+    width: 50px;
     background-color: rgba(222, 184, 135, 0.10); 
     color: black;
-}
-.div_bar_search {
-    color: aliceblue;
-    font-size: 0px;
-    border-collapse: collapse;
 }
 .filtres {
     padding: 8px;
@@ -130,10 +137,9 @@ a {
     font-weight: 800;
     margin-top: 25px;
 }
-.filtres_border 
-{
+.filtres_border {
     display: inline-block;
-    border:  2px solid rgba(119, 136, 153, 0.20);
+    border:  2px solid rgba(119, 136, 153, 0.275);
     border-radius: 30px;
     padding-left: 50px;
     padding-right: 10px;
@@ -173,12 +179,17 @@ a {
 }
 .button_information {
     border-radius: 50%;
-    border: 2px solid rgba(119, 136, 153, 0.20);
+    border: 2px solid rgba(119, 136, 153, 0.275);
     align-items: center;
     justify-content: center;
     height: 28px;
     width: 28px;
     color: #0065fc;
+    margin-right: 10px;
+}
+.div_information {
+    display: inline-flex;
+    align-items: center;
 }
 #hebergements {
     display: inline-flex;
@@ -300,7 +311,6 @@ a {
     object-fit: cover;
 }
 .div_hotel_price_section_2 {
-    padding: 5px;
     padding-left: 15px;
     padding-right: 20px;
     display: flex;
@@ -404,7 +414,7 @@ a {
     text-align: start;
     margin: 0;
 }
-.nopointul {
+.ul_footer {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -419,7 +429,7 @@ a {
     color: #0065FC;
 }
 .fa-star.grey {
-    color: #afbdcb;
+    color: #d8dfe7;
 }
 @media screen and (max-width:992px) {
     #hebergements {
@@ -489,6 +499,7 @@ a {
         border-radius: 15px 15px 0px 0px;
     }
 }
+
 @media screen and (max-width:768px) {
     #header {
         padding: 0;
@@ -497,9 +508,33 @@ a {
         display: flex;
         flex-direction: column-reverse;
     }
+    .div_banner_global {
+        display: flex;
+        flex-direction: column;
+    }
+    .ul_nav {
+        width: 100%;
+    }
+    .nav {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .li_nav {
+        width: 50%;
+        height: 45px;
+    }
+    .button_nav {
+        width: 100%;
+        height: 100%;
+        line-height: 35px;
+        font-weight: 0;
+    }
     .button_nav:hover {
         border-bottom: 2px solid #0065FC;
         color: #0065FC;
+    }
+    .filtres_border {
+        margin-right: 0;
     }
     .section_2 {
         width: 94%;
@@ -509,31 +544,33 @@ a {
         flex-wrap: wrap;
         flex-direction: row;
     }
-    .filtres_border {
-        margin-right: 0;
-    }
-    .nav_ul {
-        width: 100%;
-    }
-    .width_test1 {
-        width: 100%;
-    }
-    .width_test2 {
-        width: 50%;
-    }
-    .div_banner_global {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .button_nav {
-        width: 100%;
-        height: 100%;
-    }
 }
 @media screen and (max-width:600px) {
+    .filtres_filtres {
+        display: flex;
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
     .filtres_border {
-        margin-right: 10px;
+        margin-right: 20px;
+        margin-bottom: 15px;
+        font-size: 16px;
+        padding-right: 16px;
+    }
+    .div_bar_search {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    .input_search {
+        width: 240px;
+    }
+    .button_search {
+        display: none;
+    }
+    .button_search_mobile {
+        display: flex;
+        cursor: pointer;
     }
     .section_1 {
         width: 90%;
@@ -564,8 +601,6 @@ a {
     }
     .div_hotel_price_section_2 {
         width: 60%;
-        padding-top: 0;
-        padding-bottom: 0;
     }
     .section_3 {
         padding: 1%;
@@ -578,11 +613,9 @@ a {
         width: 100%;
         height: auto;
     }
-    
     .wrap_div {
         width: 100%;
     }
-    
     .wrap_div_section_3_normal {
         width: 100%;
         height: auto;
@@ -602,8 +635,11 @@ a {
     .footer_container {
         flex-direction: column;
     }
-    .nopointul {
+    .ul_footer {
         margin-bottom: 10%;
+    }
+    .ul_footer_mobile {
+        margin-bottom: 3%;
     }
 }
 @media screen and (max-width: 380px) {
