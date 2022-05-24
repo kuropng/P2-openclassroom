@@ -10,8 +10,9 @@
 {
     font-family: 'Raleway-VariableFont';
 } */
-*
+html
 {
+    font-weight: 500;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -68,7 +69,7 @@ a {
     margin-top: 0;
     display: inline-block;
     line-height: 100px;
-    height: 100px;
+    border-top: 2px white;
     background-color: white;
     font-weight: 600;
     color: black;
@@ -128,7 +129,7 @@ a {
     font-size: 16px;
     height: 50px;
     width: 50px;
-    background-color: rgba(222, 184, 135, 0.10); 
+    background-color: #F2F2F2; 
     color: black;
 }
 .filtres {
@@ -139,7 +140,7 @@ a {
 }
 .filtres_border {
     display: inline-block;
-    border:  2px solid rgba(119, 136, 153, 0.275);
+    border:  2px solid #F2F2F2;
     border-radius: 30px;
     padding-left: 50px;
     padding-right: 10px;
@@ -155,12 +156,12 @@ a {
 }
 .button_filtres {
     border-radius: 50%;
-    border: 2px #0066ff00 solid;
+    border: none;
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 45px;
-    width: 45px;
+    height: 46px;
+    width: 46px;
     color: #0065FC;
     background-color: #DEEBFF;
     position: absolute;
@@ -514,6 +515,7 @@ a {
     }
     .ul_nav {
         width: 100%;
+        gap: 0px;
     }
     .nav {
         width: 100%;
@@ -526,15 +528,20 @@ a {
     .button_nav {
         width: 100%;
         height: 100%;
-        line-height: 35px;
-        font-weight: 0;
+        line-height: 45px;
+        font-weight: 500;
+        border-top: 0;
+        border-bottom: 3px white;
     }
     .button_nav:hover {
-        border-bottom: 2px solid #0065FC;
+        border-top: 0;
+        border-top: 0;
+        border-bottom: 3px solid #0065FC;
         color: #0065FC;
     }
     .filtres_border {
-        margin-right: 0;
+        margin-right: 15px;
+        margin-bottom: 15px;
     }
     .section_2 {
         width: 94%;
@@ -546,6 +553,13 @@ a {
     }
 }
 @media screen and (max-width:600px) {
+    main {
+        padding: 0;
+    }
+    .container_hight_main {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     .filtres_filtres {
         display: flex;
         margin-bottom: 5px;
@@ -583,7 +597,7 @@ a {
         width: 100%;
     }
     .section_2 {
-        width: 90%;
+        width: calc(100% - 2 * 20px);
     }
     .div_global_section_2 {
         display: flex;
@@ -603,7 +617,7 @@ a {
         width: 60%;
     }
     .section_3 {
-        padding: 1%;
+        padding: 20px;
     }
     .div_global_section_3 {
         display: flex;
@@ -633,6 +647,7 @@ a {
         width: auto;
     }
     .footer_container {
+        padding: 30px;
         flex-direction: column;
     }
     .ul_footer {
