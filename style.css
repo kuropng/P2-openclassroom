@@ -14,6 +14,7 @@ html
 {
     font-weight: 500;
     font-family: 'Raleway', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -78,13 +79,15 @@ a {
     border-top: 2px solid #0065FC;
     color: #0065FC;
 }
+.container__bar_search {
+    margin-top: 20px;
+}
 .div_bar_search {
     color: aliceblue;
     font-size: 0px;
     border-collapse: collapse;
 }
 .input_search {
-    font-weight: 700;
     line-height: 46px;
     width: 190px;
     border: none;
@@ -120,7 +123,7 @@ a {
     align-items: center;
     font-size: 16px;
     border: 0px;
-    border-radius: 15px 15px 15px 15px;
+    border-radius: 15px;
 }
 .button_localisation {
     border: 3px #F2F2F2;
@@ -133,10 +136,10 @@ a {
     color: black;
 }
 .filtres {
-    padding: 8px;
+    padding-left: 8px;
     font-size: 14px;
     font-weight: 800;
-    margin-top: 25px;
+    margin-top: 35px;
 }
 .filtres_border {
     display: inline-block;
@@ -157,9 +160,6 @@ a {
 .button_filtres {
     border-radius: 50%;
     border: none;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     height: 46px;
     width: 46px;
     color: #0065FC;
@@ -349,21 +349,23 @@ a {
     padding: 5px;
 }
 .div_section_3_longue {
-    height: 300px;
+    height: 310px;
     width: 220px;
 }
 .img_activites_section_3_longue {
     border-radius: 15px 15px 0px 0px;
-    box-shadow: inset;
     margin-bottom: 0;
-    height: 300px;
+    height: 310px;
     width: 220px;
     object-fit: cover;
 }
 .div_p_div_global_section_3_longue {
     border-radius: 0px 0px 15px 15px;
-    height: 45px;
-    padding-top: 5px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 3px;
     margin: 0;
     background-color: white;
 }
@@ -392,7 +394,6 @@ a {
 }
 .img_activites_section_3_normal {
     border-radius: 15px 15px 0px 0px;
-    box-shadow: inset;
     height: 125px;
     width: 220px;
     margin-bottom: 0;
@@ -500,7 +501,6 @@ a {
         border-radius: 15px 15px 0px 0px;
     }
 }
-
 @media screen and (max-width:768px) {
     #header {
         padding: 0;
@@ -531,13 +531,29 @@ a {
         line-height: 45px;
         font-weight: 500;
         border-top: 0;
-        border-bottom: 3px white;
+        border-bottom: 3px #F2F2F2;
     }
     .button_nav:hover {
         border-top: 0;
         border-top: 0;
         border-bottom: 3px solid #0065FC;
         color: #0065FC;
+    }
+    .div_bar_search {
+        position: relative;
+        height: 50px;
+    }
+    .input_search {
+        border-radius: 15px;
+        outline: none;
+    }
+    .button_search_mobile {
+        right: 0;
+        position: absolute;
+    }
+    .filtres {
+        margin-top: 25px;
+        padding: 0;
     }
     .filtres_border {
         margin-right: 15px;
@@ -560,24 +576,18 @@ a {
         padding-left: 20px;
         padding-right: 20px;
     }
-    .filtres_filtres {
+    .container__bar_search {
         display: flex;
-        margin-bottom: 5px;
-        font-size: 16px;
-    }
-    .filtres_border {
-        margin-right: 20px;
-        margin-bottom: 15px;
-        font-size: 16px;
-        padding-right: 16px;
+        justify-content: center;
+        width: 100%;
     }
     .div_bar_search {
         display: flex;
-        justify-content: center;
-        margin-top: 40px;
+        width: 100%;
     }
     .input_search {
-        width: 240px;
+        width: 100%;
+        border-radius: 15px;
     }
     .button_search {
         display: none;
@@ -586,8 +596,22 @@ a {
         display: flex;
         cursor: pointer;
     }
+    .filtres {
+        margin-top: 15px;
+    }
+    .filtres_filtres {
+        display: flex;
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+    .filtres_border {
+        margin-right: 20px;
+        margin-bottom: 15px;
+        font-size: 17px;
+        padding-right: 17px;
+    }
     .section_1 {
-        width: 90%;
+        width: calc(100% - 2 * 20px);
         background-color: white;
     }
     .div_global_section_1 {
@@ -598,10 +622,12 @@ a {
     }
     .section_2 {
         width: calc(100% - 2 * 20px);
+        align-items: center;
     }
     .div_global_section_2 {
         display: flex;
         flex-direction: column;
+        gap: 5px;
     }
     .wrap_div_section_2 {
         width: 100%;
@@ -618,6 +644,8 @@ a {
     }
     .section_3 {
         padding: 20px;
+        margin-top: 0;
+        margin-bottom: 25px;
     }
     .div_global_section_3 {
         display: flex;
