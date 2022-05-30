@@ -168,6 +168,9 @@ a {
     left: -3px;
     top: -3px;
 }
+.filtres_border:hover {
+    background-color: #0065fc80;
+}
 .border_span1 {
     border: 3px grey;
     border-radius: 3px;
@@ -216,7 +219,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .wrap_div_section_1 {
     display: flex;
@@ -275,11 +278,10 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 10px;
     width: 100%;
 }
 .title_section_2 {
-    font-size: 20px;
+    font-size: 18px;
 }
 .h3_section_2 {
     margin-top: 5px;
@@ -289,7 +291,7 @@ a {
 .div_global_section_2 {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 .wrap_div_section_2 {
     background-color: white;
@@ -345,66 +347,80 @@ a {
     border-radius: 20px;
     width: 23%;
     height: 360px;
-    padding: 5px;
 }
 .div_section_3_longue {
-    height: 310px;
+    height: 320px;
     width: 100%;
 }
 .img_activites_section_3_longue {
     border-radius: 15px 15px 0px 0px;
     margin-bottom: 0;
-    height: 310px;
+    height: 320px;
     width: 100%;
     object-fit: cover;
 }
 .div_p_div_global_section_3_longue {
     border-radius: 0px 0px 15px 15px;
-    height: auto;
+    height: 40px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 3px;
+    align-items: center;
     margin: 0;
     background-color: white;
 }
 .title_activites_longue {
     margin-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 .wrap_div {
     width: 23%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .wrap_div_section_3_normal {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     box-sizing: border-box;
     border-radius: 20px;
     width: 100%;
-    height: 175px;
-    padding: 5px;
-}
-.wrap_div_section_3_normal:nth-child(2) {
-    margin-top: 10px;
+    height: 205px;
 }
 .div_p_div_global_section_3_normal {
+    display: flex;
+    align-items: center;
     border-radius: 0px 0px 15px 15px;
-    height: 32px;
-    padding-top: 5px;
     margin: 0;
     background-color: white;
 }
 .img_activites_section_3_normal {
     border-radius: 15px 15px 0px 0px;
-    height: 125px;
+    height: 165px;
+    width: 100%;
+    margin-bottom: 0;
+    object-fit: cover;
+}
+.wrap_div_section_3_normal_petite {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 100%;
+    height: 135px;
+}
+.div_p_div_global_section_3_normal_petite {
+    display: flex;
+    align-items: center;
+    border-radius: 0px 0px 15px 15px;
+    height: 40px;
+    margin: 0;
+    background-color: white;
+}
+.img_activites_section_3_normal_petite {
+    border-radius: 15px 15px 0px 0px;
+    height: 95px;
     width: 100%;
     margin-bottom: 0;
     object-fit: cover;
 }
 .title_activites_normal {
     margin-left: 10px;
-    margin-top: 5px;
-    margin-bottom: 5px;
 }
 .footer_back {
     background-color: #F2F2F2;
@@ -460,14 +476,11 @@ a {
     .filtres_border {
         margin-right: 0;
     }
-    .div_global_section_3 {
-        gap: 10px;
-    }
     .wrap_div_section_3_longue {
-        width: 49%;
+        width: 48%;
     }
     .wrap_div {
-        width: 49%;
+        width: 48%;
     }
     .wrap_div_section_3_normal {
         width: 100%;
@@ -504,6 +517,9 @@ a {
     .img-hotel_section_2 {
         width: 100%;
         border-radius: 15px 15px 0px 0px;
+    }
+    .div_global_section_3 {
+        justify-content: space-between;
     }
 }
 @media screen and (max-width:768px) {
@@ -657,6 +673,7 @@ a {
     .div_global_section_3 {
         display: flex;
         flex-direction: column;
+        gap: 15px;
     }
     .wrap_div_section_3_longue {
         width: 100%;
@@ -664,9 +681,13 @@ a {
     }
     .wrap_div {
         width: 100%;
+        gap: 15px;
     }
     .wrap_div_section_3_normal {
         width: 100%;
+        height: auto;
+    }
+    .wrap_div_section_3_normal_petite {
         height: auto;
     }
     .img_activites_section_3_longue {
@@ -674,6 +695,10 @@ a {
         height: 130px;
     }
     .img_activites_section_3_normal {
+        width: 100%;
+        height: 130px;
+    }
+    .img_activites_section_3_normal_petite {
         width: 100%;
         height: 130px;
     }
