@@ -220,7 +220,7 @@ a {
 .div_global_section_1 {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 20px;
     justify-content: space-around;
 }
 .cliquable_card_section_1:hover {
@@ -661,6 +661,9 @@ a {
         margin-right: 15px;
         margin-bottom: 15px;
     }
+    .div_global_section_1 {
+        gap: 15px;
+    }
     .section_2 {
         width: 94%;
     }
@@ -688,7 +691,7 @@ a {
         width: 100%;
     }
     .input_search {
-        width: 100%;
+        width: calc(100% - 2 * 70px);
         padding-right: 70px;
         border-radius: 0px 15px 15px 0px;
     }    
@@ -737,6 +740,7 @@ a {
         display: flex;
         flex-direction: column;
         gap: 5px;
+        width: 100%;
     }
     .wrap_div_section_2 {
         width: 100%;
