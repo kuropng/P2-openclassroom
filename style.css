@@ -223,10 +223,8 @@ a {
     gap: 20px;
     justify-content: space-around;
 }
-.cliquable_card_section_1:hover {
-    cursor: pointer;
-    transform: scale(1.03);
-    transition: ease 0.4s;
+.cliquable_card_section_1 {
+    display: flex;
 }
 .wrap_div_section_1 {
     display: flex;
@@ -265,8 +263,6 @@ a {
 }
 .p_cliquable:hover {
     cursor: pointer;
-    transform: scale(1.03);
-    transition: ease 0.4s;
 }
 .p_p {
     font-size: 16px;
@@ -305,10 +301,8 @@ a {
     flex-direction: column;
     gap: 20px;
 }
-.cliquable_card_section_2:hover {
-    cursor: pointer;
-    transform: scale(1.03);
-    transition: ease 0.4s;
+.cliquable_card_section_2 {
+    display: flex;
 }
 .wrap_div_section_2 {
     background-color: white;
@@ -355,6 +349,7 @@ a {
 .div_global_section_3 {
     display: inline-flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 30px;
     font-size: 10px;
 }
@@ -471,12 +466,7 @@ a {
 .cliquable_2_section_3 {
     margin: 0;
 }
-.cliquable_normal_section_3:hover {
-    cursor: pointer;
-    transform: scale(1.03);
-    transition: ease 0.4s;
-}
-.cliquable_longue_section_3:hover {
+.card_scale:hover {
     cursor: pointer;
     transform: scale(1.03);
     transition: ease 0.4s;
@@ -522,18 +512,12 @@ a {
         width: 94%;
         height: auto;    
     }
-    .wrap_div_section_1 {
-        width: 100%;
-    }
     .cliquable_card_section_1 {
         width: 31%;
     }
     .div_img_section_1 {
         width: auto;
-    }
-    .img-hotel_section_1 {
-        width: 100%;
-    }
+    } 
     .section_2 {
         width: 94%;
         height: auto;
@@ -548,22 +532,15 @@ a {
     .wrap_div {
         width: 48%;
     }
-    .wrap_div_section_3_normal {
-        width: 100%;
-    }
-    .wrap_div_section_3_normal_2 {
-        width: 100%;
-    }
-    .div_section_3_longue {
-        width: 100%;
-    }
-    .img_activites_section_3_longue {
-        width: 100%;
-    }
-    .img_activites_section_3_normal {
-        width: 100%;
-    }
-    .img_activites_section_3_normal_2 {
+    .wrap_div_section_1,
+    .img-hotel_section_1,
+    .wrap_div_section_3_normal,
+    .wrap_div_section_3_normal_2,
+    .div_section_3_longue,
+    .img_activites_section_3_longue,
+    .img_activites_section_3_normal,
+    .img_activites_section_3_normal_2,
+    .width-settings {
         width: 100%;
     }
 }
@@ -634,11 +611,11 @@ a {
     }
     .button_nav:hover {
         border-top: 0;
-        border-top: 0;
         border-bottom: 3px solid #0065FC;
         color: #0065FC;
     }
     .button_nav:active {
+        border-top: 0;
         border-bottom: 3px solid #0065FC;
         color: #0065FC;
     }
